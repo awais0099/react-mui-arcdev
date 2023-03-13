@@ -1,30 +1,29 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { 
-    Grid,
-    Typography,
-    Button,
-    Hidden,
-    useMediaQuery,
-    IconButton,
-    Dialog,
-    DialogContent,
-    TextField,
-    CircularProgress,
-    Snackbar
-} from "@mui/material";
 import { cloneDeep } from "lodash";
-import {makeStyles, useTheme} from "@mui/styles";
+
+import Button from "@mui/material/Button";
+import Hidden from "@mui/material/Hidden";
+import IconButton from '@mui/material/IconButton';
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import TextField from "@mui/material/TextField";
+import CircularProgress from "@mui/material/CircularProgress";
+import Snackbar from "@mui/material/Snackbar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import useTheme from "@mui/styles/useTheme";
+import makeStyles from "@mui/styles/makeStyles";
+
 import Lottie from "react-lottie";
 import estimateAnimation from "./animations/estimateAnimation/data.json";
 
-import customSoftwareIcon from "./assests/CustomSoftwareIcon.svg";
 import mobileAppsIcon from "./assests/mobileIcon.svg";
 import websitesIcon from "./assests/websiteIcon.svg";
 import check from "./assests/check.svg";
 import send from "./assests/send.svg";
 import software from "./assests/software.svg";
-import mobile from "./assests/mobile.svg";
 import website from "./assests/website.svg";
 import backArrow from "./assests/backArrow.svg";
 import forwardArrow from "./assests/forwardArrow.svg";
@@ -37,7 +36,6 @@ import persons from "./assests/persons.svg";
 import people from "./assests/people.svg";
 import info from "./assests/info.svg";
 import bell from "./assests/bell.svg";
-import users from "./assests/users.svg";
 import iphone from "./assests/iphone.svg";
 import gps from "./assests/gps.svg";
 import customized from "./assests/customized.svg";
@@ -82,7 +80,6 @@ function Estimate (props) {
 
     const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
     const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-    const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
     const estimateOptions = {
         loop: true,

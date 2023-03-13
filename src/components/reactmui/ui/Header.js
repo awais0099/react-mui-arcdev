@@ -140,7 +140,6 @@ const Header = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false); 
-  const [openMenu, setOpenMenu] = useState(false);
 
   const iOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const classes = useStyles();
@@ -152,7 +151,9 @@ const Header = (props) => {
       {name: "Custom Software", link: "/customsoftware"},
       {name: "Mobile App Development", link: "/mobileapps"},
       {name: "Website Development", link: "/websites"},
-    ];
+  ];
+
+  let valueforuseEffect = props.value;
   
   useEffect(() => {
     switch (window.location.pathname) {
@@ -162,7 +163,7 @@ const Header = (props) => {
         }
         break;
       case "/services":
-        if (window.location.pathname === "/services" !== 1) {
+        if (window.location.pathname === "/services" && props.value !== 1) {
           props.setValue(1);
         }
         break;
@@ -181,12 +182,12 @@ const Header = (props) => {
           props.setValue(4);
         }
         break;
-      case "/services":
-        if (props.value !== 1) {
-          props.setValue(1);
-        }
-        props.setSelectedIndex(0);
-        break;
+      // case "/services":
+      //   if (props.value !== 1) {
+      //     props.setValue(1);
+      //   }
+      //   props.setSelectedIndex(0);
+      //   break;
       case "/customsoftware":
         if (props.value !== 1) {
           props.setValue(1);

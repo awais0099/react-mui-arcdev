@@ -1,9 +1,7 @@
 import React from 'react';
-import { Typography } from '@mui/material';
-import { Grid } from '@mui/material';
-import { Hidden } from '@mui/material';
-
-import {makeStyles} from '@mui/styles';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import makeStyles from '@mui/styles/makeStyles';
 import { Link } from "react-router-dom";
 
 import footerAdornment from '../assests/FooterAdornment.svg';

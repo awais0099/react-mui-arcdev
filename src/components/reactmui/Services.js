@@ -1,10 +1,13 @@
 import React from "react";
-import {makeStyles, useTheme} from "@mui/styles";
+import makeStyles from "@mui/styles/makeStyles";
+import useTheme from "@mui/styles/useTheme";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
-import {
-	Grid, Typography, Button
-} from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
+
 
 
 import customSoftwareIcon from "./assests/CustomSoftwareIcon.svg";
@@ -43,7 +46,6 @@ function Services(props){
     const theme = useTheme();
     const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
     const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-    const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
 	return (
 		<Grid container direction="column"
@@ -91,7 +93,7 @@ function Services(props){
                         item
                         style={{marginRight: matchesSM ? "0em":matchesMD ? "2em":"5em", marginTop: matchesSM ? "1em":undefined}}
                     >
-                        <img src={mobileAppsIcon} className={classes.icon} width="250em" />
+                        <img src={mobileAppsIcon} alt="mobile app icon" className={classes.icon} width="250em" />
                     </Grid>
                 </Grid>
             </Grid>
@@ -118,7 +120,7 @@ function Services(props){
                         <Button component={Link} to="/customsoftware" onClick={() => {props.setValue(1); props.setSelectedIndex(0);}} variant="outlined" className={classes.learnButton}>Learn more</Button>
                     </Grid>
                     <Grid item style={{marginTop: matchesSM ? "1em":undefined}}>
-                        <img src={customSoftwareIcon} className={classes.icon} />
+                        <img src={customSoftwareIcon} alt="custom software icon" className={classes.icon} />
                     </Grid>
                 </Grid>
             </Grid>
@@ -147,12 +149,10 @@ function Services(props){
                         <Button component={Link} to="/websites" onClick={() => {props.setValue(1); props.setSelectedIndex(2);}} variant="outlined" className={classes.learnButton}>Learn more</Button>
                     </Grid>
                     <Grid item style={{marginRight: matchesSM ? "0em":matchesMD ? "2em":"5em", marginTop: matchesSM ? "1em":undefined}}>
-                        <img src={websitesIcon} className={classes.icon} width="250em" />
+                        <img src={websitesIcon} alt="website icon" className={classes.icon} width="250em" />
                     </Grid>
                 </Grid>
             </Grid>
-
-
 		</Grid>
 	);
 }

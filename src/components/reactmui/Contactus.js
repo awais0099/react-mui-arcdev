@@ -1,19 +1,18 @@
 import React, {useState} from "react";
 import axios from "axios";
-import {
-	Grid,
-	Typography,
-	useMediaQuery,
-	Button,
-	Hidden,
-	TextField,
-	Dialog,
-	DialogContent,
-	CircularProgress,
-	Snackbar
-} from "@mui/material";
 
-import {makeStyles, useTheme} from "@mui/styles";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import CircularProgress from "@mui/material/CircularProgress";
+import Snackbar from "@mui/material/Snackbar";
+import TextField from "@mui/material/TextField";
+import useTheme from "@mui/styles/useTheme";
+import makeStyles from "@mui/styles/makeStyles";
+
 import { Link } from "react-router-dom";
 
 import email from "./assests/email.svg";

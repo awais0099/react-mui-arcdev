@@ -1,12 +1,10 @@
-import Reat from "react";
-import {
-	Grid,
-	Typography,
-	useMediaQuery,
-	Avatar,
-	Hidden
-} from "@mui/material";
-import {makeStyles, useTheme} from "@mui/styles";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Hidden from "@mui/material/Hidden";
+import Avatar from "@mui/material/Avatar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import useTheme from "@mui/styles/useTheme";
+import makeStyles from "@mui/styles/makeStyles";
 
 import CallToAction from "./ui/CallToAction.js";
 

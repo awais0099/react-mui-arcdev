@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import Lottie from "react-lottie";
-import { Grid } from '@mui/material';
-import { Typography } from '@mui/material';
-import { Button } from "@mui/material";
+
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Link } from "react-router-dom";
-import { makeStyles, useTheme } from "@mui/styles";
+import useTheme from "@mui/styles/useTheme";
+import makeStyles from "@mui/styles/makeStyles";
 
 import CallToAction from "./ui/CallToAction.js";
 
@@ -131,7 +133,6 @@ export default function LandingPage(props) {
     const theme = useTheme();
     const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
     const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-    const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
     
     const defaultOptions = {
         loop: true,
@@ -188,7 +189,7 @@ export default function LandingPage(props) {
                         <Button component={Link} to="/customsoftware" onClick={() => {props.setValue(1); props.setSelectedIndex(0);}} variant="outlined" className={classes.learnButton}>Learn more</Button>
                     </Grid>
                     <Grid item>
-                        <img src={customSoftwareIcon} className={classes.icon} />
+                        <img src={customSoftwareIcon} alt="custom software icon" className={classes.icon} />
                     </Grid>
                 </Grid>
             </Grid>
@@ -221,7 +222,7 @@ export default function LandingPage(props) {
                         item
                         style={{marginRight: matchesSM || matchesMD ? "0em":"5em",}}
                     >
-                        <img src={mobileAppsIcon} className={classes.icon} />
+                        <img src={mobileAppsIcon} alt="mobile app icon" className={classes.icon} />
                     </Grid>
                 </Grid>
             </Grid>
@@ -250,7 +251,7 @@ export default function LandingPage(props) {
                         <Button component={Link} to="/websites" onClick={() => {props.setValue(1); props.setSelectedIndex(2);}} variant="outlined" className={classes.learnButton}>Learn more</Button>
                     </Grid>
                     <Grid item>
-                        <img src={websitesIcon} className={classes.icon} />
+                        <img src={websitesIcon} alt="website icon" className={classes.icon} />
                     </Grid>
                 </Grid>
             </Grid>

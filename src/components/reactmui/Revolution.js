@@ -1,11 +1,10 @@
 import React from "react";
-import {
-	Grid,
-	Typography,
-	Hidden,
-	useMediaQuery
-} from "@mui/material";
-import {makeStyles, useTheme} from "@mui/styles";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import useTheme from "@mui/styles/useTheme";
+import makeStyles from "@mui/styles/makeStyles";
+
 import Lottie from "react-lottie";
 
 import vision from "./assests/vision.svg";
